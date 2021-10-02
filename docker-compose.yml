@@ -1,0 +1,21 @@
+version: '3.5'
+services:
+    database:
+        image: backoffice-db
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: RootPassword
+            MYSQL_DATABASE: Backoffice
+            MYSQL_USER: MainUser
+            MYSQL_PASSWORD: MainPassword
+        tty: true 
+
+
+
+
+
+  
